@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSync - Add Scholarships</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Scholarship Form -->
+    <section class="py-8">
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-center mb-4">Add a Scholarship</h2>
+            <form id="scholarshipForm">
+                <label for="title" class="block font-medium">Title:</label>
+                <input type="text" id="scholarshipTitle" placeholder="Title" required class="w-full p-2 border rounded mb-2">
+                <label for="title" class="block font-medium">Provider:</label>
+                <input type="text" id="providerName" placeholder="Enter Provider Name" required class="w-full p-2 border rounded mb-2">
+                <label for="scholarshipName" class="block font-medium">Scholarship Name:</label>
+                <input type="text" id="scholarshipName" placeholder="Enter Scholarship Name" required class="w-full p-2 border rounded mb-2">
+                <label for="scholarshipLink" class="block font-medium">Scholarship Link:</label>
+                <input type="url" id="scholarshipLink" placeholder="Enter Scholarship Link" required class="w-full p-2 border rounded mb-2">
+                <label for="deadline" class="block font-medium">Deadline:</label>
+                <input type="date" id="scholarshipDeadline" placeholder="Enter Deadline" required class="w-full p-2 border rounded mb-2">
+                <label for="description" class="block font-medium">Description:</label>
+                <textarea id="scholarshipDescription" placeholder="Enter Description" required class="w-full p-2 border rounded mb-2"></textarea>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 w-full">Add Scholarship</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("scholarshipForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const title = document.getElementById("scholarshipTitle").value;
+            const provider = document.getElementById("providerName").value;
+            const name = document.getElementById("scholarshipName").value;
+            const link = document.getElementById("scholarshipLink").value;
+            const deadline = document.getElementById("scholarshipDeadline").value;
+            const description = document.getElementById("scholarshipDescription").value;
+
+            const newScholarship = { title, provider, name, link, deadline, description };
+            let scholarships = JSON.parse(localStorage.getItem("scholarships")) || [];
+            scholarships.push(newScholarship);
+            localStorage.setItem("scholarships", JSON.stringify(scholarships));
+            window.location.href = "scholarship.html";
+        });
+    </script>
+</body>
+</html>

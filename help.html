@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSync - Find Your Perfect Scholarship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-all duration-300">ScholarSync</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="userdata.html" class="nav-link">Add/Delete Scholarship</a>
+                    <a href="scholarship.html" class="nav-link">Active Scholarships</a>
+                    <a href="colleges.html" class="nav-link">Colleges</a>
+                    <a href="help.html" class="nav-link">Help</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Navigation link styles */
+        .nav-link {
+            position: relative;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4A5568;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    
+        .nav-link:hover {
+            color: #2563EB;
+            transform: scale(1.1);
+        }
+    
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #2563EB;
+            left: 0;
+            bottom: -4px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+
+    <!-- Help Section -->
+    <br><section id="help" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Help & Support</h2>
+            
+            <!-- FAQs -->
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">1. How to find scholarships?</h3>
+                    <p class="text-gray-600">To find scholarships, visit the "Top Government Scholarships" section, which lists various scholarships available based on your qualifications and location. Click on any scholarship to get more details and apply online.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">2. What is the Scholarship Finder?</h3>
+                    <p class="text-gray-600">The Scholarship Finder is a portal designed to help students locate scholarships based on their eligibility criteria. It lists multiple scholarships for various regions, education levels, and fields of study.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">3. Who is eligible for the scholarships?</h3>
+                    <p class="text-gray-600">Eligibility for scholarships varies. Some scholarships require academic merit, while others may require financial need or specific geographic location. Please check the eligibility criteria on the respective scholarship pages for detailed information.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">4. How can I apply for a scholarship?</h3>
+                    <p class="text-gray-600">To apply for a scholarship, simply click on the "Go somewhere" button available on each scholarship card. This will take you to the official scholarship website where you can find the application form and other relevant details.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">5. Can I contact for assistance?</h3>
+                    <p class="text-gray-600">If you need further assistance or have any questions, Feel Free to contact us via email <a href="scholar.sync01@gmail.com">scholar.sync01@gmail.com</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-2">6. How do I know if I've been selected for a scholarship?</h3>
+                    <p class="text-gray-600">Once you apply for a scholarship, you will receive an email or a notification from the scholarship provider regarding your application status. Make sure to check your email regularly and keep track of deadlines.</p>
+                </div>
+            </div>
+
+            <!-- Support Contact -->
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Still need help? Contact us via email<r/p>
+                    <br><br><button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
+                    <a href="mailto:scholar.sync01@gmail.com?subject=Query&body=Hello, I have a question regarding...">Contact Support</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">ScholarSync</h3>
+                <p class="text-gray-400">Making education accessible through technology.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><a href="dashboard.html" class="hover:text-white">Dashboard</a></li>
+                    <li><a href="userdata.html" class="hover:text-white">Add/Delete Scholarship</a></li>
+                    <li><a href="scholarship.html" class="hover:text-white">Active Scholarships</a></li>
+                    <li><a href="colleges.html" class="hover:text-white">Colleges</a></li>
+                    <li><a href="help.html" class="hover:text-white">Help</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Contact us</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="mailto:scholar.sync01@gmail.com?subject=Query&body=Hello, I have a question regarding...">scholar.sync01@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>2025 ScholarSync.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

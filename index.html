@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSync - Find Your Perfect Scholarship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-all duration-300">ScholarSync</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="userdata.html" class="nav-link">Add/Delete Scholarship</a>
+                    <a href="scholarship.html" class="nav-link">Active Scholarships</a>
+                    <a href="colleges.html" class="nav-link">Colleges</a>
+                    <a href="help.html" class="nav-link">Help</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Navigation link styles */
+        .nav-link {
+            position: relative;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4A5568;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    
+        .nav-link:hover {
+            color: #2563EB;
+            transform: scale(1.1);
+        }
+    
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #2563EB;
+            left: 0;
+            bottom: -4px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+    
+    <!-- Home Section -->
+    <br><section id="home" class="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Find Your Perfect Scholarship
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Upload your documents and get matched with the best scholarships for you.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
+                        <a href="scholarship.html">Active Scholarships</a>
+                    </button>
+                    <button class="bg-white text-blue-600 px-8 py-3 rounded-lg border border-blue-600 hover:bg-blue-50">
+                        <a href="colleges.html">Top Colleges</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- How it Works -->
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Upload Documents</h3>
+                    <p class="text-gray-600">Simply upload your academic documents and certificates.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Get Perfect Scholarship</h3>
+                    <p class="text-gray-600">Our system verifies your documents and give results as per your data.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Get Matched</h3>
+                    <p class="text-gray-600">Receive personalized scholarship recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ScholarSync</h3>
+                    <p class="text-gray-400">Making education accessible through technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="dashboard.html" class="hover:text-white">Dashboard</a></li>
+                        <li><a href="userdata.html" class="hover:text-white">Add/Delete Scholarship</a></li>
+                        <li><a href="scholarship.html" class="hover:text-white">Active Scholarships</a></li>
+                        <li><a href="colleges.html" class="hover:text-white">Colleges</a></li>
+                        <li><a href="help.html" class="hover:text-white">Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:scholar.sync01@gmail.com?subject=Query&body=Hello, I have a question regarding...">scholar.sync01@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>2025 ScholarSync.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Status</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const scholarshipName = params.get("name");
+            const provider = params.get("provider");
+            const amount = params.get("amount");
+            const deadline = params.get("deadline");
+            
+            if (scholarshipName) {
+                document.getElementById("scholarshipName").textContent = scholarshipName;
+                document.getElementById("provider").textContent = provider;
+                document.getElementById("amount").textContent = amount;
+                document.getElementById("deadline").textContent = deadline;
+                document.getElementById("status").textContent = "Pending";
+                document.getElementById("formStatus").textContent = "Not Filled";
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Scholarship Status</h1>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Scholarship Name</th>
+            <td id="scholarshipName"></td>
+        </tr>
+        <tr>
+            <th>Provider</th>
+            <td id="provider"></td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td id="amount"></td>
+        </tr>
+        <tr>
+            <th>Deadline</th>
+            <td id="deadline"></td>
+        </tr>
+        <tr>
+            <th>Application Status</th>
+            <td id="status"></td>
+        </tr>
+        <tr>
+            <th>Form Submission</th>
+            <td id="formStatus"></td>
+        </tr>
+    </table>
+</body>
+</html>

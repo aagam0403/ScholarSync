@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSync - Find Your Perfect Scholarship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jsp.js"></script>
+    <script src="demo.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-all duration-300">ScholarSync</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="userdata.html" class="nav-link">Add/Delete Scholarship</a>
+                    <a href="scholarship.html" class="nav-link">Active Scholarships</a>
+                    <a href="colleges.html" class="nav-link">Colleges</a>
+                    <a href="help.html" class="nav-link">Help</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class=""></button>
+                </div>
+            </div> 
+        </div>
+    </nav>
+
+    <style>
+        /* Navigation link styles */
+        .nav-link {
+            position: relative;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4A5568;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    
+        .nav-link:hover {
+            color: #2563EB;
+            transform: scale(1.1);
+        }
+    
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #2563EB;
+            left: 0;
+            bottom: -4px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+        #scholarshipResults{
+            margin-top: 20px;
+        }
+    </style>
+
+    <!--Student Dashboard-->
+    <section id="dashboard" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <br><h3 class="text-3xl font-bold text-center mb-12">Student Dashboard</h3>
+            <hr>
+            <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8">
+                <form class="mt-4">
+                    <h2 class="text-xl font-semibold mb-4">Student Details</h2>
+                    <hr class="mb-4">
+                    <div class="space-y-4">
+                        <div>
+                            <Name: for="name" class="block font-medium">Name:</label>
+                            <input type="text" class="w-full p-2 border rounded-md" id="name" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label for="gender" class="block font-medium">Gender:</label>
+                            <select class="w-full p-2 border rounded-md" id="gender" >
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <!--<div>
+                            <label for="college" class="block font-medium">College Name Or School Name:</label>
+                            <input type="text" class="w-full p-2 border rounded-md" id="college" placeholder="Enter your School or Collage Name">
+                        </div>-->
+                        <div>
+                            <label for="class" class="block font-medium">Standard (if School):</label>
+                            <select class="w-full p-2 border rounded-md">
+                                <option value="">Select Standard</option>
+                                <option value="10">10th Standard</option>
+                                <option value="11">11th Standard</option>
+                                <option value="12">12th Standard</option>
+                            </select>
+                        </div>
+                      
+                        <div>
+                            <label for="year" class="block font-medium">Year (if College):</label>
+                            <select class="w-full p-2 border rounded-md" id="year">
+                                <option value="">Select Year</option>
+                                <option value="FY">FY</option>
+                                <option value="SY">SY</option>
+                                <option value="TY">TY</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="hsc_marks" class="block font-medium">SSC Percentage:</label>
+                            <input type="text" class="w-full p-2 border rounded-md" id="ssc_marks" placeholder="Enter your SSC Percentage">
+                        </div>
+                        <div>
+                            <label for="ssc_marks" class="block font-medium">HSC Percentage:</label>
+                            <input type="text" class="w-full p-2 border rounded-md" id="hsc_marks" placeholder="Enter your HSC Percentage">
+                        </div>
+                        <div>
+                            <label for="percentage" class="block font-medium">Collage Percentage (%):</label>
+                            <input type="text" class="w-full p-2 border rounded-md" id="percent" placeholder="Enter your percentage">
+                        </div>
+                        
+
+                        
+                        <div>
+                            <label for="caste_category" class="block font-medium">Caste:</label>
+                            <select class="w-full p-2 border rounded-md" id="caste_category">
+                                <option value="">Select Caste</option>
+                                <option value="FY">General</option>
+                                <option value="SY">OBC</option>
+                                <option value="TY">SC/ST</option>
+                            </select>
+                        </div>      
+                        <div class="flex space-x-4">
+                       <button type="button" onclick="fetchScholarships()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+                       
+                            <input type="reset" value="Reset" class="bg-gray-400 text-white px-6 py-2 rounded-lg hover:bg-gray-500">
+                           
+                        </div>
+                       
+                        <div id="scholarshipResults"></div>
+                       
+                       
+                        
+                    </div>
+                </form> 
+                              
+            </div>        
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ScholarSync</h3>
+                    <p class="text-gray-400">Making Education accessible through technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="dashboard.html" class="hover:text-white">Dashboard</a></li>
+                        <li><a href="userdata.html" class="hover:text-white">Add/Delete Scholarship</a></li>
+                        <li><a href="scholarship.html" class="hover:text-white">Active Scholarships</a></li>
+                        <li><a href="colleges.html" class="hover:text-white">Colleges</a></li>
+                        <li><a href="help.html" class="hover:text-white">Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:scholar.sync01@gmail.com?subject=Query&body=Hello, I have a question regarding...">scholar.sync01@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>2025 ScholarSync.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

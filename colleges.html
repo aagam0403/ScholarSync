@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSync - Find Your Perfect Scholarship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-all duration-300">ScholarSync</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="userdata.html" class="nav-link">Add/Delete Scholarship</a>
+                    <a href="scholarship.html" class="nav-link">Active Scholarships</a>
+                    <a href="colleges.html" class="nav-link">Colleges</a>
+                    <a href="help.html" class="nav-link">Help</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+
+        /* Navigation link styles */
+        .nav-link {
+            position: relative;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4A5568;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    
+        .nav-link:hover {
+            color: #2563EB;
+            transform: scale(1.1);
+        }
+    
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #2563EB;
+            left: 0;
+            bottom: -4px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in {
+        animation: fadeInUp 2s ease-out forwards;
+    }
+    </style>
+    
+    <!-- Colleges Section -->
+<br><br>
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Top Colleges in Gujarat</h2>
+        <hr><hr>
+
+        <br><br>
+        <div class="space-y-6">
+
+            <!-- GTU -->
+            <div class="flex bg-white rounded-lg shadow-md p-4 border border-gray-200 transform transition duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:border-black opacity-0 animate-fade-in">
+                <img src="gtu_logo.jpeg" alt="GTU Logo" class="w-28 h-28 rounded-lg mr-4 object-cover">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold">Gujarat Technical University</h3>
+                    <hr><br>
+                    <p class="text-gray-600 mb-2 text-sm">Gujarat Technological University (GTU) is a public university established in 2007 by the Government of Gujarat...</p>
+                    <p class="text-gray-800 font-medium text-sm">Location: Ahmedabad, Gujarat.</p>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 self-center">
+                    <a href="https://www.gtu.ac.in/">Show More</a>
+                </button>
+            </div>
+
+            <!-- GLS -->
+            <div class="flex bg-white rounded-lg shadow-md p-4 border border-gray-200 transform transition duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:border-black opacity-0 animate-fade-in">
+                <img src="gls_uni_logo.jpeg" alt="GLS Logo" class="w-28 h-28 rounded-lg mr-4 object-cover">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold">GLS University</h3>
+                    <hr><br>
+                    <p class="text-gray-600 mb-2 text-sm">GLS University, located in Ahmedabad, is a private university known for its focus on commerce, management, law...</p>
+                    <p class="text-gray-800 font-medium text-sm">Location: Ahmedabad, Gujarat.</p>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 self-center">
+                    <a href="https://www.glsuniversity.ac.in/">Show More</a>
+                </button>
+            </div>
+
+            <!-- AD Patel -->
+            <div class="flex bg-white rounded-lg shadow-md p-4 border border-gray-200 transform transition duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:border-black opacity-0 animate-fade-in">
+                <img src="ADIT_logo.png" alt="ADIT Logo" class="w-28 h-28 rounded-lg mr-4 object-cover">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold">A D Patel Institute of Technology</h3>
+                    <hr><br>
+                    <p class="text-gray-600 mb-2 text-sm">A. D. Patel Institute of Technology (ADIT) is an engineering college located in Anand, Gujarat, affiliated with GTU...</p>
+                    <p class="text-gray-800 font-medium text-sm">Location: Anand, Gujarat.</p>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 self-center">
+                    <a href="http://adit.ac.in/">Show More</a>
+                </button>
+            </div>
+
+            <!-- DAIICT -->
+            <div class="flex bg-white rounded-lg shadow-md p-4 border border-gray-200 transform transition duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:border-black opacity-0 animate-fade-in">
+                <img src="daiict_logo.jpeg" alt="DAIICT Logo" class="w-28 h-28 rounded-lg mr-4 object-cover">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold">DAIICT</h3>
+                    <hr><br>
+                    <p class="text-gray-600 mb-2 text-sm">Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT) is a premier engineering institute...</p>
+                    <p class="text-gray-800 font-medium text-sm">Location: Gandhinagar, Gujarat.</p>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 self-center">
+                    <a href="https://www.daiict.ac.in/">Show More</a>
+                </button>
+            </div>
+
+            <!-- PDEU -->
+            <div class="flex bg-white rounded-lg shadow-md p-4 border border-gray-200 transform transition duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:border-black opacity-0 animate-fade-in">
+                <img src="pdeu_logo.jpeg" alt="PDEU Logo" class="w-28 h-28 rounded-lg mr-4 object-cover">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold">PDEU</h3>
+                    <hr><br>
+                    <p class="text-gray-600 mb-2 text-sm">Pandit Deendayal Energy University (PDEU) is a private university known for its research-driven approach...</p>
+                    <p class="text-gray-800 font-medium text-sm">Location: Gandhinagar, Gujarat.</p>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 self-center">
+                    <a href="https://pdeu.ac.in/">Show More</a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ScholarSync</h3>
+                    <p class="text-gray-400">Making education accessible through technology.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="dashboard.html" class="hover:text-white">Dashboard</a></li>
+                        <li><a href="userdata.html" class="hover:text-white">Add/Delete Scholarship</a></li>
+                        <li><a href="scholarship.html" class="hover:text-white">Active Scholarships</a></li>
+                        <li><a href="colleges.html" class="hover:text-white">Colleges</a></li>
+                        <li><a href="help.html" class="hover:text-white">Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:scholar.sync01@gmail.com?subject=Query&body=Hello, I have a question regarding...">scholar.sync01@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>2025 ScholarSync.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
